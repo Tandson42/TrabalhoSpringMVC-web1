@@ -23,7 +23,7 @@
                         placeholder="Descrição"></label>
                 <label>Data <input type="date" name="data" value="${requestScope.tarefa.data}"></label>
                 <label>Categoria
-                    <select name="categoria" required>
+                    <select name="categoria.id" required>
                         <option value="">Selecione</option>
                         <c:forEach var="c" items="${requestScope.categorias}">
                             <option value="${c.id}" ${c.id==requestScope.tarefa.categoria.id ? 'selected' : '' }>
