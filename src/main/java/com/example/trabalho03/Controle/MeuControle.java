@@ -315,7 +315,7 @@ public class MeuControle {
         return "cadastrarcategoria";
     }
 
-    @PostMapping("cadastrarcategoria")
+    @PostMapping("adicionarcategoria")
     public String adicionarCategoria(@ModelAttribute Categoria c, HttpSession session, RedirectAttributes atributos) {
         Usuario u = (Usuario) session.getAttribute("usuario");
         if (u == null) {
@@ -337,7 +337,7 @@ public class MeuControle {
             }
         } else {
             atributos.addAttribute("mensagem", "O nome da categoria não pode estar vazio.");
-            return "redirect:/cadastrarcategoria";
+            return "redirect:/vercategorias";
         }
         return "redirect:/vercategorias";
     }
