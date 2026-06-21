@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Editar Categoria</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
 <c:if test="${sessionScope.usuario.admin}">

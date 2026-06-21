@@ -3,10 +3,11 @@
 <html>
 <head>
     <title>Cadastrar ADMIN</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
 <c:if test="${requestScope.mensagem != null}">
-    <p style="color: green; font-weight: bold;">${requestScope.mensagem}</p>
+    <div class="alerta">${requestScope.mensagem}</div>
 </c:if>
 
 <c:if test="${sessionScope.usuario.admin}">
